@@ -50,3 +50,7 @@ The signing key is my traffic key from my `key site <https://keys.kyleisom.net/>
 	uid                            Kyle Isom <isomk@kyleisom.net>
 	uid                            Kyle Isom <kyle@metacircular.net>
 	sub   4096R/0xB40E03E26F9AB6AE 2015-09-16 [expires: 2020-09-14]
+
+Signatures are done on releases, and on key updates to the README. It
+is safe to assume that the traffic key list on the key site is the key
+that is used to sign updates.

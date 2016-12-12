@@ -83,3 +83,18 @@ install: $(KERNEL_TREE)/vmlinux
 clean:
 	rm -fr $(KERNEL_TREE) $(KERNEL_TARBALL)
 
+# If you want to trust these keys, you'll need to
+# gpg2 --edit <key id>
+# gpg2 --lsign <key id>
+.PHONY: fetch-keys
+fetch-keys:
+	@echo "Fetching and importing keys."
+	@echo "*** ACTION REQUIRED ***"
+	@echo "This Makefile will *not* update the trust on the keys."
+	@sleep 2
+	# Fetch GKH's release public key.
+	gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 38DBBDC86092693E
+	# Fetch LT's release public key.
+	gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 79BE3E4300411886
+	# Fetch spender's release public key.
+	gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 44D1C0F82525FE49

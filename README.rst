@@ -37,3 +37,16 @@ patches tend not to stick around, which is why they are kept in this repo.
 1. make
 2. sudo make install
 
+
+Signing key
+-----------
+
+The signing key is my traffic key from my `key site <https://keys.kyleisom.net/>`_.::
+
+	pub   4096R/0x9DEA9987AE305ED4 2015-09-16 [expires: 2020-09-14]
+	uid                            Kyle Isom <kyle@imap.cc>
+	uid                            Kyle Isom <kyle@tyrfingr.is>
+	uid                            Kyle Isom <coder@kyleisom.net>
+	uid                            Kyle Isom <isomk@kyleisom.net>
+	uid                            Kyle Isom <kyle@metacircular.net>
+	sub   4096R/0xB40E03E26F9AB6AE 2015-09-16 [expires: 2020-09-14]

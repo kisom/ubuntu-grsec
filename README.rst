@@ -7,6 +7,19 @@ configuration from a current Ubuntu Server based system (whatever
 use) using whatever kernel is currently supported by the grsecurity
 patches in this repo. It's probably of limited use to anyone else.
 
+Current versions:
+
++==============+===========================+
+| Component    | Version                   |
++==============+===========================+
+| Distribution | Ubuntu Server 16.04.1 LTS |
++--------------+---------------------------+
+| Linux kernel | 4.8.14                    |
++--------------+---------------------------+
+| grsecurity   | testing-201612110933      |
++--------------+---------------------------+
+
+
 The manual way
 --------------
 
@@ -54,3 +67,29 @@ The signing key is my traffic key from my `key site <https://keys.kyleisom.net/>
 Signatures are done on releases, and on key updates to the README. It
 is safe to assume that the traffic key list on the key site is the key
 that is used to sign updates.
+
+Subcomponent signing keys
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The kernel tar file and grsec patch file both have signatures that are
+checked. Additionally, a SHA-512 digest for each of these is checked,
+as are the SHA-512 digests on the signature files. These files should
+also be verified before committing; the tag signature attests to the
+verification on the repo side.
+
+grsecurity::
+
+  pub   4096R/0x44D1C0F82525FE49 2013-11-10
+  uid                            Bradley Spengler (spender) <spender@grsecurity.net>
+  sub   4096R/0x4151B7C93F57788A 2013-11-10
+
+linux::
+
+  pub   4096R/0x38DBBDC86092693E 2011-09-23
+  uid                            Greg Kroah-Hartman (Linux kernel stable release signing key) <greg@kroah.com>
+  sub   4096R/0xF38153E276D54749 2011-09-23
+  
+  pub   2048R/0x79BE3E4300411886 2011-09-20
+  uid                            Linus Torvalds <torvalds@linux-foundation.org>
+  sub   2048R/0x88BCE80F012F54CA 2011-09-20
+

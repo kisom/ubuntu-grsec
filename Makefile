@@ -1,5 +1,5 @@
-KERNEL_VERSION :=		4.8.13
-GRSEC_PATCHFILE :=		grsecurity-3.1-4.8.13-201612082118.patch
+KERNEL_VERSION :=		4.8.14
+GRSEC_PATCHFILE :=		grsecurity-3.1-4.8.14-201612110933.patch
 GRSEC_UPSTREAM :=		https://grsecurity.net/test/$(GRSEC_PATCHFILE)
 KERNEL_TARBALL :=		linux-$(KERNEL_VERSION).tar.xz
 KERNEL_UPSTREAM :=		https://cdn.kernel.org/pub/linux/kernel/v4.x/$(KERNEL_TARBALL)

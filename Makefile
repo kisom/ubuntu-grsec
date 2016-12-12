@@ -81,7 +81,7 @@ install: $(KERNEL_TREE)/vmlinux
 
 .PHONY: clean
 clean:
-	rm -fr $(KERNEL_TREE) $(KERNEL_TARBALL)
+	rm -fr $(KERNEL_TREE) $(KERNEL_TARBALL) $(KERNEL_TARXZ)
 
 # If you want to trust these keys, you'll need to
 # gpg2 --edit <key id>
